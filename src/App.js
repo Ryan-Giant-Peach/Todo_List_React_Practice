@@ -7,7 +7,7 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
-  const [filterTodos, setFilteredTodos] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
     filterHandler();
@@ -39,7 +39,7 @@ function App() {
         setInputText={setInputText}
         setStatus={setStatus}
       />
-      <TodoList setTodos={setTodos} todos={todos} />
+      <TodoList filteredTodos={filteredTodos} setTodos={setTodos} todos={todos}/>
     </div>
   );
 }
